@@ -292,22 +292,22 @@
             <th>3dp</th>
         </tr>
         <tr>
-            <th>xaxis_displaySeparatorLine</th>
+            <th>xaxis_displayGridLine</th>
             <th>whether to display the x-axis split line</th>
             <th>false</th>
         </tr>
         <tr>
-            <th>xaxis_separatorLineSize</th>
+            <th>xaxis_gridLineSize</th>
             <th>size of x-axis split line</th>
             <th>1px</th>
         </tr>
         <tr>
-            <th>xaxis_separatorLineColor</th>
+            <th>xaxis_gridLineColor</th>
             <th>color of x-axis split line</th>
             <th>#B8B8B8</th>
         </tr>
         <tr>
-            <th>xaxis_separatorLineStyle</th>
+            <th>xaxis_gridLineStyle</th>
             <th>the style of x-axis split line</th>
             <th>DASH</th>
         </tr>
@@ -368,22 +368,22 @@
             <th>3dp</th>
         </tr>
         <tr>
-            <th>yaxis_displaySeparatorLine</th>
+            <th>yaxis_displayGridLine</th>
             <th>whether to display the y-axis split line</th>
             <th>false</th>
         </tr>
         <tr>
-            <th>yaxis_separatorLineSize</th>
+            <th>yaxis_gridLineSize</th>
             <th>size of y-axis split line</th>
             <th>1px</th>
         </tr>
         <tr>
-            <th>yaxis_separatorLineColor</th>
+            <th>yaxis_gridLineColor</th>
             <th>color of y-axis split line</th>
             <th>#B8B8B8</th>
         </tr>
         <tr>
-            <th>yaxis_separatorLineStyle</th>
+            <th>yaxis_gridLineStyle</th>
             <th>the style of y-axis split line</th>
             <th>DASH</th>
         </tr>
