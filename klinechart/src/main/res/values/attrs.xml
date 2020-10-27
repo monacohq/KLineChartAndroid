@@ -2,34 +2,34 @@
 <resources>
     <declare-styleable name="KLineChartView">
 
-        <!--主指标类型-->
+        <!--candle stick chart indicator type-->
         <attr name="mainIndicatorType" format="string"/>
-        <!--副指标类型-->
+        <!--sub chart indicator type-->
         <attr name="subIndicatorType" format="string"/>
-        <!--图表高度尺寸类型-->
+        <!--chart height size type-->
         <attr name="chartHeightSizeType" format="string"/>
-        <!--成交量图高度-->
+        <!--volume chart height-->
         <attr name="volChartHeight" format="reference|dimension|float"/>
-        <!--指标图高度-->
+        <!--indicator chart height-->
         <attr name="indicatorChartHeight" format="reference|dimension|float"/>
-        <!--是否使用快速滚动-->
+        <!--whether enable fast scroll or not-->
         <attr name="decelerationEnable" format="boolean"/>
 
-        <!--是否显示vol指标图-->
+        <!--whether display volume chart-->
         <attr name="displayVolIndicatorChart" format="boolean"/>
 
-        <!--是否绘制边框线-->
-        <attr name="grid_displayLine" format="boolean"/>
-        <!--边框线尺寸-->
-        <attr name="grid_lineSize" format="reference|dimension"/>
-        <!--边框线颜色-->
-        <attr name="grid_lineColor" format="reference|color"/>
+        <!--whether display chart border line-->
+        <attr name="chartBorderLine_displayLine" format="boolean"/>
+        <!--chart border line size-->
+        <attr name="chartBorderLine_lineSize" format="reference|dimension"/>
+        <!--chart border line color-->
+        <attr name="chartBorderLine_lineColor" format="reference|color"/>
 
-        <!--蜡烛图上涨颜色-->
+        <!--candle increasing color-->
         <attr name="candle_increasingColor" format="reference|color"/>
-        <!--蜡烛图下跌颜色-->
+        <!--candle decreasing color-->
         <attr name="candle_decreasingColor" format="reference|color"/>
-        <!--蜡烛图风格-->
+        <!--candle style-->
         <attr name="candle_style" format="integer">
             <enum name="solid" value="0"/>
             <enum name="stroke" value="1"/>
@@ -37,168 +37,166 @@
             <enum name="decreasing_stroke" value="3"/>
             <enum name="ohlc" value="4"/>
         </attr>
-        <!--图表风格-->
+        <!--candle chart style-->
         <attr name="candle_chartStyle" format="integer">
             <enum name="candle" value="0"/>
             <enum name="time_line" value="1"/>
         </attr>
-        <!--是否标记最高价格-->
+        <!--whether display highest price mark or not-->
         <attr name="candle_displayHighestPriceMark" format="boolean"/>
-        <!--是否标记最低价格-->
+        <!--whether display lowest price mark or not-->
         <attr name="candle_displayLowestPriceMark" format="boolean"/>
-        <!--最高最低价格标记颜色-->
+        <!--lowest and highest price mark text color-->
         <attr name="candle_lowestHighestPriceMarkTextColor" format="reference|color"/>
-        <!--最高最低价格标记文字大小-->
+        <!--lowest and highest price mark text size-->
         <attr name="candle_lowestHighestPriceMarkTextSize" format="reference|dimension"/>
-        <!--是否标记最新价-->
+        <!--whether display last price mark or not-->
         <attr name="candle_displayLastPriceMark" format="boolean"/>
-        <!--最新价格线样式-->
+        <!--last price mark line style-->
         <attr name="candle_lastPriceMarkLineStyle" format="integer">
             <enum name="dash" value="0"/>
             <enum name="solid" value="1"/>
         </attr>
-        <!--最新价标记线尺寸-->
+        <!--last price mark line size-->
         <attr name="candle_lastPriceMarkLineSize" format="reference|dimension"/>
-        <!--最新价标记线颜色-->
+        <!--last price mark line color-->
         <attr name="candle_lastPriceMarkLineColor" format="reference|color"/>
-        <!--分时线颜色-->
+        <!--time line color-->
         <attr name="candle_timeLineColor" format="reference|color"/>
-        <!--分时线尺寸-->
+        <!--time line size-->
         <attr name="candle_timeLineSize" format="reference|dimension"/>
-        <!--分时线填充色-->
+        <!--time line fill color-->
         <attr name="candle_timeLineFillColor" format="reference|color"/>
-        <!--分时均线颜色-->
+        <!--time average line color-->
         <attr name="candle_timeAverageLineColor" format="reference|color"/>
 
-        <!--指标线的尺寸-->
+        <!--indicator line size-->
         <attr name="indicator_lineSize" format="reference|dimension"/>
-        <!--指标图上涨颜色-->
+        <!--indicator increasing color-->
         <attr name="indicator_increasingColor" format="reference|color"/>
-        <!--指标图下跌颜色-->
+        <!--indicator decreasing color-->
         <attr name="indicator_decreasingColor" format="reference|color"/>
-        <!--指标线的颜色-->
-        <!--<attr name="indicator_lineColors" format="reference"/>-->
 
-        <!--光标线样式-->
+        <!--tooltip cross line style-->
         <attr name="tooltip_crossLineStyle" format="integer">
             <enum name="dash" value="0"/>
             <enum name="solid" value="1"/>
         </attr>
-        <!--光标线尺寸-->
+        <!--tooltip cross line size-->
         <attr name="tooltip_crossLineSize" format="reference|dimension"/>
-        <!--光标线颜色-->
+        <!--tooltip cross line color-->
         <attr name="tooltip_crossLineColor" format="reference|color"/>
-        <!--光标显示的文字框的线尺寸-->
+        <!--tooltip cross line text rect stroke line size-->
         <attr name="tooltip_crossTextRectStrokeLineSize" format="reference|dimension"/>
-        <!--光标显示的文字框的线颜色-->
+        <!--tooltip cross line text rect stroke line color-->
         <attr name="tooltip_crossTextRectStrokeLineColor" format="reference|color"/>
-        <!--光标显示的文字框的填充颜色-->
+        <!--tooltip cross line text rect fill color-->
         <attr name="tooltip_crossTextRectFillColor" format="reference|color"/>
-        <!--光标文字颜色-->
+        <!--tooltip cross line text color-->
         <attr name="tooltip_crossTextColor" format="reference|color"/>
-        <!--光标文字大小-->
+        <!--tooltip cross line text size-->
         <attr name="tooltip_crossTextSize" format="reference|dimension"/>
-        <!--光标文字四周边距-->
+        <!--tooltip cross line text margin-->
         <attr name="tooltip_crossTextMarginSpace" format="reference|dimension"/>
-        <!--常规数据提示框边框线尺寸-->
+        <!--general data bg rect border stroke line size-->
         <attr name="tooltip_generalDataRectStrokeLineSize" format="reference|dimension"/>
-        <!--常规数据提示框边框线颜色-->
+        <!--general data bg rect border stroke line color-->
         <attr name="tooltip_generalDataRectStrokeLineColor" format="reference|color"/>
-        <!--常规数据提示框填充颜色-->
+        <!--general data bg rect color-->
         <attr name="tooltip_generalDataRectFillColor" format="reference|color"/>
-        <!--常规数据提示文字大小-->
+        <!--general data text size-->
         <attr name="tooltip_generalDataTextSize" format="reference|dimension"/>
-        <!--常规数据提示文字颜色-->
+        <!--general data text color-->
         <attr name="tooltip_generalDataTextColor" format="reference|color"/>
-        <!--常规数据上涨颜色-->
+        <!--general data increasing color-->
         <attr name="tooltip_generalDataIncreasingColor" format="reference|color"/>
-        <!--常规数据下跌颜色-->
+        <!--general data decreasing color-->
         <attr name="tooltip_generalDataDecreasingColor" format="reference|color"/>
-        <!--指标提示规则-->
+        <!--indicator display rule-->
         <attr name="tooltip_indicatorDisplayRule">
             <enum name="always" value="0"/>
             <enum name="follow_cross" value="1"/>
             <enum name="none" value="2"/>
         </attr>
-        <!--指标提示文字大小-->
+        <!--indicator text size-->
         <attr name="tooltip_indicatorTextSize" format="reference|dimension"/>
 
-        <!--是否显示x轴线-->
+        <!--whether display x-axis line-->
         <attr name="xaxis_displayAxisLine" format="boolean"/>
-        <!--x轴线的颜色-->
+        <!--x-axis line color-->
         <attr name="xaxis_axisLineColor" format="reference|color"/>
-        <!--x轴线的尺寸-->
+        <!--x-axis line size-->
         <attr name="xaxis_axisLineSize" format="reference|dimension"/>
-        <!--是否显示x轴线上的分割文字-->
+        <!--whether display x-axis tick text-->
         <attr name="xaxis_displayTickText" format="boolean"/>
-        <!--x轴线上分割文字颜色-->
+        <!--x-axis tick text color-->
         <attr name="xaxis_tickTextColor" format="reference|color"/>
-        <!--x轴线上分割文字的大小-->
+        <!--x-axis tick text size-->
         <attr name="xaxis_tickTextSize" format="reference|dimension"/>
-        <!--是否显示x轴tick线-->
+        <!--whether display x-axis tick line-->
         <attr name="xaxis_displayTickLine" format="boolean"/>
-        <!--x轴线上文字线的高度-->
+        <!--x-axis tick line size-->
         <attr name="xaxis_tickLineSize" format="reference|dimension"/>
-        <!--是否显示x轴上的分割线-->
-        <attr name="xaxis_displaySeparatorLine" format="boolean"/>
-        <!--x轴上分割线的尺寸-->
-        <attr name="xaxis_separatorLineSize" format="reference|dimension"/>
-        <!--x轴上分割线颜色-->
-        <attr name="xaxis_separatorLineColor" format="reference|color"/>
-        <!--x轴上分割线类型-->
-        <attr name="xaxis_separatorLineStyle" format="integer">
+        <!--whether display x-axis grid line-->
+        <attr name="xaxis_displayGridLine" format="boolean"/>
+        <!--x-axis grid line size-->
+        <attr name="xaxis_gridLineSize" format="reference|dimension"/>
+        <!--x-axis grid line color-->
+        <attr name="xaxis_gridLineColor" format="reference|color"/>
+        <!--x-axis grid line style-->
+        <attr name="xaxis_gridLineStyle" format="integer">
             <enum name="dash" value="0"/>
             <enum name="solid" value="1"/>
         </attr>
-        <!--x轴上文字的margin-->
+        <!--x-axis text margin space-->
         <attr name="xaxis_textMarginSpace" format="reference|dimension"/>
-        <!--x轴最大高度-->
+        <!--x-axis maximum height-->
         <attr name="xaxis_axisMaxHeight" format="reference|dimension"/>
-        <!--x轴最小高度-->
+        <!--x-axis minimum height-->
         <attr name="xaxis_axisMinHeight" format="reference|dimension"/>
 
-        <!--是否显示y轴线-->
+        <!--whether display y-axis line or not-->
         <attr name="yaxis_displayAxisLine" format="boolean"/>
-        <!--y轴线的颜色-->
+        <!--y-axis line color-->
         <attr name="yaxis_axisLineColor" format="reference|color"/>
-        <!--y轴线的尺寸-->
+        <!--y-axis line size-->
         <attr name="yaxis_axisLineSize" format="reference|dimension"/>
-        <!--是否显示y轴线上的分割文字-->
+        <!--whether display y-axis tick text or not-->
         <attr name="yaxis_displayTickText" format="boolean"/>
-        <!--y轴线上分割文字颜色-->
+        <!--y-axis tick text color-->
         <attr name="yaxis_tickTextColor" format="reference|color"/>
-        <!--y轴线上分割文字的大小-->
+        <!--y-axis tick text size-->
         <attr name="yaxis_tickTextSize" format="reference|dimension"/>
-        <!--是否显示y轴tick线-->
+        <!--whether display y-axis tick text line or not-->
         <attr name="yaxis_displayTickLine" format="boolean"/>
-        <!--y轴线上文字线的高度-->
+        <!--y-axis tick line size-->
         <attr name="yaxis_tickLineSize" format="reference|dimension"/>
-        <!--是否显示y轴上的分割线-->
-        <attr name="yaxis_displaySeparatorLine" format="boolean"/>
-        <!--y轴上分割线的尺寸-->
-        <attr name="yaxis_separatorLineSize" format="reference|dimension"/>
-        <!--y轴上分割线颜色-->
-        <attr name="yaxis_separatorLineColor" format="reference|color"/>
-        <!--y轴上分割线类型-->
-        <attr name="yaxis_separatorLineStyle" format="integer">
+        <!--whether display y-axis grid line or not-->
+        <attr name="yaxis_displayGridLine" format="boolean"/>
+        <!--y-axis grid line size-->
+        <attr name="yaxis_gridLineSize" format="reference|dimension"/>
+        <!--y-axis grid line color-->
+        <attr name="yaxis_gridLineColor" format="reference|color"/>
+        <!--y-axis grid line style-->
+        <attr name="yaxis_gridLineStyle" format="integer">
             <enum name="dash" value="0"/>
             <enum name="solid" value="1"/>
         </attr>
-        <!--y轴上文字的margin-->
+        <!--y-axis text margin space-->
         <attr name="yaxis_textMarginSpace" format="reference|dimension"/>
-        <!--y轴文字位置-->
+        <!--y-axis label position-->
         <attr name="yaxis_textPosition" format="integer">
             <enum name="outside" value="0"/>
             <enum name="inside" value="1"/>
         </attr>
-        <!--y轴位置-->
+        <!--y-axis position-->
         <attr name="yaxis_axisPosition" format="integer">
             <enum name="left" value="0"/>
             <enum name="right" value="1"/>
         </attr>
-        <!--y轴最大高度-->
+        <!--y-axis maximum width-->
         <attr name="yaxis_axisMaxWidth" format="reference|dimension"/>
-        <!--y轴最小高度-->
+        <!--y-axis minimum width-->
         <attr name="yaxis_axisMinWidth" format="reference|dimension"/>
 
     </declare-styleable>
