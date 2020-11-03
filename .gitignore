@@ -85,3 +85,6 @@ Temporary Items
 
 gradlew
 gradlew.bat
+
+# github propeties
+github.properties

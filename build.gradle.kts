@@ -40,6 +40,34 @@ subprojects {
                 options.jvmTarget = "1.8"
             }
         }
+
+        extensions.run {
+            configure(com.android.build.gradle.BaseExtension::class.java) {
+                compileSdkVersion(Versions.TARGET_ANDROID_SDK)
+                defaultConfig {
+                    minSdkVersion(Versions.MIN_ANDROID_SDK)
+                    targetSdkVersion(Versions.TARGET_ANDROID_SDK)
+
+                    consumerProguardFiles("consumer-rules.pro")
+                }
+
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_1_8
+                    targetCompatibility = JavaVersion.VERSION_1_8
+                }
+
+                buildTypes {
+                    maybeCreate("debug").apply {
+                        isMinifyEnabled = false
+                        isDebuggable = true
+                    }
+                    maybeCreate("release").apply {
+                        isMinifyEnabled = true
+                        isDebuggable = false
+                    }
+                }
+            }
+        }
     }
 }
 

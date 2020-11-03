@@ -288,8 +288,8 @@ internal class YAxisChart(
                 minMaxArray[1] = max(kLineModel.macd?.macd ?: Double.NEGATIVE_INFINITY, minMaxArray[1])
             }
             Indicator.Type.VOL -> {
-                minMaxArray[0] = min(kLineModel.volume ?: 0.0, 0.0)
-                minMaxArray[1] = max(kLineModel.volume ?: 0.0, minMaxArray[1])
+                minMaxArray[0] = min(kLineModel.volume, 0.0)
+                minMaxArray[1] = max(kLineModel.volume, minMaxArray[1])
             }
             Indicator.Type.BOLL -> {
                 minMaxArray[0] = min(kLineModel.boll?.up ?: Double.POSITIVE_INFINITY, minMaxArray[0])
