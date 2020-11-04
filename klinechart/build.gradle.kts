@@ -28,7 +28,7 @@ publishing {
             run {
                 groupId = "monacohq"
                 artifactId = "klinechart"
-                version = "1.0.0"
+                version = "1.0.1"
                 artifact("$buildDir/outputs/aar/klinechart-release.aar")
             }
         }
@@ -39,8 +39,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/monacohq/KLineChartAndroid")
             credentials {
-                username = githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
-                password = githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                username = githubProperties["gpr.usr"] as String
+                password = githubProperties["gpr.key"] as String
             }
         }
     }

@@ -10,11 +10,8 @@ buildscript {
     dependencies {
         classpath(ClassPaths.GRADLE)
         classpath(ClassPaths.KOTLIN_GRADLE_PLUGIN)
-        classpath(ClassPaths.BUGSNAG_PLUGIN)
         classpath(ClassPaths.ANDROIDX_NAVIGATION_SAFE_ARGS_GRADLE_PLUGIN)
         classpath(ClassPaths.ANDROID_JUNIT_JACOCO_PLUGIN)
-        classpath(ClassPaths.GOOGLE_SERVICE)
-        classpath(ClassPaths.MAVEN_GRADLE_PLUGIN)
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle.kts files
     }
@@ -62,7 +59,7 @@ subprojects {
                         isDebuggable = true
                     }
                     maybeCreate("release").apply {
-                        isMinifyEnabled = true
+                        isMinifyEnabled = false
                         isDebuggable = false
                     }
                 }
@@ -71,12 +68,6 @@ subprojects {
     }
 }
 
-configurations.all {
-    resolutionStrategy {
-        force("org.antlr:antlr4-runtime:4.7.1")
-        force("org.antlr:antlr4-tool:4.7.1")
-    }
-}
 
 tasks {
     val clean by registering(Delete::class) {

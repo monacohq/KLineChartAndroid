@@ -73,55 +73,11 @@ object ClassPaths {
     const val MOCKK = "io.mockk:mockk:${Versions.MOCKK}"
     const val ANDROID_MOCKK = "io.mockk:mockk-android:${Versions.MOCKK}"
 
-    // scarlet
-    const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
     const val KOTLIN_REFLECT = "org.jetbrains.kotlin:kotlin-reflect:${Versions.KOTLIN}"
-    const val SCARLET = "com.tinder.scarlet:scarlet:${Versions.SCARLET}"
-    const val SCARLET_STREAM_ADAPTER =
-        "com.tinder.scarlet:stream-adapter-rxjava2:${Versions.SCARLET}"
-    const val SCARLET_MOSHI = "com.tinder.scarlet:message-adapter-moshi:${Versions.SCARLET}"
-    const val SCARLET_LIFECYCLE = "com.tinder.scarlet:lifecycle-android:${Versions.SCARLET}"
-    const val SCARLET_WEBSERVER = "com.tinder.scarlet:websocket-mockwebserver:${Versions.SCARLET}"
-    const val SCARLET_COROUTINE = "com.tinder.scarlet:stream-adapter-coroutines:${Versions.SCARLET}"
-
-    //moshi
-    const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
-    const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:${Versions.MOSHI}"
-
-    const val CALLIGRAPHY = "io.github.inflationx:calligraphy3:${Versions.CALLIGRAPHY}"
-    const val VIEWPUMP = "io.github.inflationx:viewpump:${Versions.VIEWPUMP}"
-
-    // philology
-    const val PHILOLOGY = "com.jcminarro:Philology:${Versions.PHILOLOGY}"
-
-    //bugsnag
-    const val BUGSNAG_PLUGIN = "com.bugsnag:bugsnag-android-gradle-plugin:${Versions.BUGSNAG_PLUGIN}"
-    const val BUGSNAG_ANDROID = "com.bugsnag:bugsnag-android:${Versions.BUGSNAG_ANDROID}"
-
-    // koin
-    const val KOIN_ANDROID = "org.koin:koin-android:${Versions.KOIN}"
-    const val KOIN_ANDROIDX_SCOPE = "org.koin:koin-androidx-scope:${Versions.KOIN}"
-    const val KOIN_ANDROIDX_VIEWMODEL = "org.koin:koin-androidx-viewmodel:${Versions.KOIN}"
-    const val KOIN_ANDROIDX_FRAGMENT = "org.koin:koin-androidx-fragment:${Versions.KOIN}"
-    const val KOIN_TEST = "org.koin:koin-test:${Versions.KOIN}"
 
     // Timber
     const val TIMBER = "com.jakewharton.timber:timber:${Versions.TIMBER}"
 
-    // Retrofit
-    const val RETROFIT2_RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
-    const val RETROFIT2_CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}"
-    const val RETORFIT2_MOCKWEBSERVER = "com.squareup.okhttp3:mockwebserver:${Versions.MOCKWEBSERVER}"
-
-    // Chart
-    const val MP_ANDROID_CHART = "com.github.PhilJay:MPAndroidChart:v${Versions.MP_ANDROID_CHART}"
-
     // Jacoco
     const val ANDROID_JUNIT_JACOCO_PLUGIN = "com.vanniktech:gradle-android-junit-jacoco-plugin:${Versions.ANDROID_JUNIT_JACOCO_PLUGIN}"
-
-    // Google Service
-    const val GOOGLE_SERVICE = "com.google.gms:google-services:${Versions.GOOGLE_SERVICE}"
-
-    // Maven
-    const val MAVEN_GRADLE_PLUGIN = "com.github.dcendents:android-maven-gradle-plugin:${Versions.MAVEN_GRADLE_PLUGIN}"
 }
