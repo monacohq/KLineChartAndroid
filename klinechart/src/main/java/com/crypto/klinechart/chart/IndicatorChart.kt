@@ -163,18 +163,12 @@ internal open class IndicatorChart(
             }
 
             Indicator.Type.VOL -> {
-                val dataList = this.dataProvider.dataList
                 lineNumber = 3
                 onDrawing = { i, x, halfBarSpace, kLineModel ->
                     val vol = kLineModel.volume
 
-                    var refKLineModel: KLineModel? = null
-                    if (i > 0) {
-                        refKLineModel = dataList[i - 1]
-                    }
-                    val refClosePrice = refKLineModel?.closePrice ?: Double.NEGATIVE_INFINITY
                     this.paint.style = Paint.Style.FILL
-                    if (kLineModel.closePrice > refClosePrice) {
+                    if (kLineModel.closePrice >= kLineModel.openPrice) {
                         this.paint.color = indicator.increasingColor
                     } else {
                         this.paint.color = indicator.decreasingColor

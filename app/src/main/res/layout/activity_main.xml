@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.crypto.klinechart.KLineChartView
+        android:id="@+id/kline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:candle_increasingColor="@color/priceUpBg"
+        app:candle_decreasingColor="@color/priceDownBg"
+        app:candle_displayHighestPriceMark="true"
+        app:candle_displayLowestPriceMark="true"
+        app:candle_displayLastPriceMark="true"
+        app:candle_lastPriceMarkLineStyle="dash"
+        app:indicator_increasingColor="@color/priceUpBg"
+        app:indicator_decreasingColor="@color/priceDownBg"
+        app:yaxis_displayAxisLine="true"
+        app:yaxis_axisLineColor="@color/candleStickBorderBg"
+        app:yaxis_axisPosition="right"
+        app:yaxis_textPosition="inside"
+        app:yaxis_displayGridLine="true"
+        app:yaxis_gridLineStyle="solid"
+        app:yaxis_gridLineColor="@color/candleStickGridLineBg"
+        app:yaxis_displayTickLine="false"
+        app:xaxis_displayAxisLine="true"
+        app:xaxis_axisLineColor="@color/candleStickBorderBg"
+        app:xaxis_displayGridLine="true"
+        app:xaxis_gridLineStyle="solid"
+        app:xaxis_gridLineColor="@color/candleStickGridLineBg"
+        app:xaxis_displayTickLine="true"
+        app:chartBorderLine_displayLine="true"
+        app:chartBorderLine_lineColor="@color/candleStickGridLineBg"
+        app:tooltip_crossLineColor="@color/candleStickCrosshairBg"
+        app:tooltip_crossLineStyle="dash"
+        app:tooltip_crossTextRectFillColor="@color/priceNoChangeBg"
+        app:tooltip_crossTextRectStrokeLineColor="@color/priceNoChangeBg"
+        app:tooltip_crossTextColor="@color/white100"
+        app:tooltip_generalDataIncreasingColor="@color/priceUpBg"
+        app:tooltip_generalDataDecreasingColor="@color/priceDownBg"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

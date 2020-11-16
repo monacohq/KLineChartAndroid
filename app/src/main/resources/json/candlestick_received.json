@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "method": "subscribe",
+  "result": {
+    "instrument_name": "BTC_USDT",
+    "subscription": "candlestick.1m.BTC_USDT",
+    "channel": "candlestick",
+    "depth": 20,
+    "interval": "1m",
+    "data": [
+      {
+        "i": "ETH_CRO",
+        "t": 1595985540000,
+        "o": 10868.43,
+        "h": 10869.59,
+        "l": 10863.27,
+        "c": 10866.26,
+        "v": 0.125688
+      }
+    ]
+  }
+}

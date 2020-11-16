@@ -858,6 +858,14 @@ class KLineChartView @JvmOverloads constructor(
     }
 
     /**
+     * set initial candle stick chart scale
+     * default showing 120 data
+     */
+    fun setInitialVisibleDataScale(scale: Int) {
+        this.dataProvider.setInitialVisibleDataScale(scale)
+    }
+
+    /**
      * loadComplete
      */
     fun loadComplete() {

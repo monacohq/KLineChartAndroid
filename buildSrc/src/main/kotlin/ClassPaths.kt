@@ -80,4 +80,8 @@ object ClassPaths {
 
     // Jacoco
     const val ANDROID_JUNIT_JACOCO_PLUGIN = "com.vanniktech:gradle-android-junit-jacoco-plugin:${Versions.ANDROID_JUNIT_JACOCO_PLUGIN}"
+
+    //moshi
+    const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
+    const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:${Versions.MOSHI}"
 }

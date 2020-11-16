@@ -29,6 +29,13 @@ internal class DataProvider(private val viewPortHandler: ViewPortHandler) {
     private var visibleDataCount = 120
 
     /**
+     *  initial visible data scale
+     *  control the initial number of visible data
+     *  initialVisibleDataCount = visibleDataCount / initialVisibleDataScale
+     */
+    private var initialVisibleDataScale = 1
+
+    /**
      * data space
      */
     private var dataSpace = 0f
@@ -233,6 +240,13 @@ internal class DataProvider(private val viewPortHandler: ViewPortHandler) {
     fun getVisibleDataMinPos(): Int = visibleDataMinPos
 
     fun getVisibleDataCount(): Int = visibleDataCount
+
+    /**
+     * set initial visible data count
+     */
+    fun setInitialVisibleDataScale(scale: Int) {
+        visibleDataCount /= scale
+    }
 
     fun isShowingLastData(): Boolean = dataList.size <= visibleDataMinPos + visibleDataCount
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="priceUpBg">#20BCA4</color>
+    <color name="priceUpBg50">#8020BCA4</color>
+    <color name="priceDownBg">#E64B60</color>
+    <color name="priceDownBg50">#80E64B60</color>
+    <color name="priceNoChangeBg">#828EA1</color>
+    <color name="chartBg">#0B1426</color>
+    <color name="blue10">#0A1199FA</color>
+    <color name="selectedBookBg">#828EA1</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="candleStickBorderBg">#1AFFFFFF</color>
+    <color name="candleStickBg">#FF0A1326</color>
+    <color name="candleStickXYAxisTextColor">#FF5A6679</color>
+    <color name="candleStickGridLineBg">#FF1A1F2A</color>
+    <color name="candleStickCrosshairBg">#FF828EA1</color>
+    <color name="white60">#99FFFFFF</color>
+    <color name="white100">#FFFFFFFF</color>
+</resources>
+    <!-- opacity hex level --><!--100% — FF--><!--95% — F2--><!--90% — E6--><!--85% — D9--><!--80% — CC--><!--75% — BF--><!--70% — B3--><!--65% — A6--><!--60% — 99--><!--55% — 8C--><!--50% — 80--><!--45% — 73--><!--40% — 66--><!--35% — 59--><!--30% — 4D--><!--25% — 40--><!--20% — 33--><!--15% — 26--><!--10% — 1A--><!--5% — 0D--><!--0% — 00-->

@@ -12,6 +12,7 @@ object Versions {
     const val JUNIT5_VINTAGE = "5.3.2"
     const val JUNIT5 = "5.4.1"
     const val COROUTINES = "1.3.8"
+    const val MOSHI = "1.8.0"
 
     const val MIN_ANDROID_SDK = 21
     const val TARGET_ANDROID_SDK = 29

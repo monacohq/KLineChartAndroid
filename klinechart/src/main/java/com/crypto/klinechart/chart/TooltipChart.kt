@@ -22,6 +22,7 @@ import com.crypto.klinechart.internal.utils.Utils
 import com.crypto.klinechart.internal.utils.formatDate
 import com.crypto.klinechart.internal.utils.formatDecimal
 import com.crypto.klinechart.model.KLineModel
+import java.math.RoundingMode
 import kotlin.math.max
 import kotlin.math.min
 
@@ -407,7 +408,7 @@ internal class TooltipChart(
                     kLineModel.lowPrice.formatDecimal(tooltip.priceDecimalPlace),
                     change.formatDecimal(tooltip.priceDecimalPlace),
                     changePercent,
-                    kLineModel.volume.formatDecimal(tooltip.volumeDecimalPlace)
+                    kLineModel.volume.formatDecimal(tooltip.volumeDecimalPlace, mode = RoundingMode.DOWN)
                 )
             }
 
@@ -593,7 +594,7 @@ internal class TooltipChart(
             var valueStr = "--"
             if (value != null) {
                 valueStr = if (indicatorType == Indicator.Type.VOL) {
-                    "${values[i]?.toInt() ?: "--"}"
+                    values[i].formatDecimal(tooltip.volumeDecimalPlace, mode = RoundingMode.DOWN)
                 } else {
                     values[i].formatDecimal(tooltip.priceDecimalPlace)
                 }

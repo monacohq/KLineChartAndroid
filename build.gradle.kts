@@ -1,4 +1,5 @@
 buildscript {
+    val kotlin_version by extra("1.3.72")
     repositories {
         google()
         jcenter()
@@ -12,8 +13,9 @@ buildscript {
         classpath(ClassPaths.KOTLIN_GRADLE_PLUGIN)
         classpath(ClassPaths.ANDROIDX_NAVIGATION_SAFE_ARGS_GRADLE_PLUGIN)
         classpath(ClassPaths.ANDROID_JUNIT_JACOCO_PLUGIN)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
         // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle.kts files
+        // in the individual module build.gradle.kts.kts files
     }
 }
 

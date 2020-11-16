@@ -37,6 +37,14 @@ object Dependencies {
 
     // third-party lib
     object DevLib {
+        fun DependencyHandler.moshi() {
+            implementation(
+                listOf(
+                    ClassPaths.MOSHI_KOTLIN,
+                    ClassPaths.MOSHI_ADAPTERS
+                )
+            )
+        }
     }
 
     //testing

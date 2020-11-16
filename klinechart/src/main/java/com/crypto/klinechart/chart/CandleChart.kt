@@ -287,10 +287,11 @@ internal class CandleChart(
                 refKLineModel = dataList[i - 1]
             }
             val refClosePrice = refKLineModel?.closePrice ?: Double.NEGATIVE_INFINITY
+            val openPrice = kLineModel.openPrice
             val closePrice = kLineModel.closePrice
             val highPrice = kLineModel.highPrice
             val lowPrice = kLineModel.lowPrice
-            if (closePrice > refClosePrice) {
+            if (closePrice >= openPrice) {
                 this.paint.color = increasingColor
             } else {
                 this.paint.color = decreasingColor
@@ -409,8 +410,7 @@ internal class CandleChart(
         x: Float,
         halfBarSpace: Float,
         openPrice: Double,
-        closePrice:
-            Double,
+        closePrice: Double,
         highPrice: Double,
         lowPrice: Double
     ) {
