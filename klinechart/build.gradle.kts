@@ -28,7 +28,7 @@ publishing {
             run {
                 groupId = "monacohq"
                 artifactId = "klinechart"
-                version = "1.0.1"
+                version = "1.0.2"
                 artifact("$buildDir/outputs/aar/klinechart-release.aar")
             }
         }
