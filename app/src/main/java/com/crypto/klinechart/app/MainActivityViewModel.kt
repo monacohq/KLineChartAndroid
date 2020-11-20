@@ -1,6 +1,5 @@
 package com.crypto.klinechart.app
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
@@ -11,12 +10,11 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import java.io.File
 
-class MainActivityViewModel(val activity: MainActivity): ViewModel() {
+class MainActivityViewModel(val activity: MainActivity) : ViewModel() {
     val moshi = Moshi.Builder()
         .add(BigDecimalAdapter())
         .add(KotlinJsonAdapterFactory())
         .build()
-
 
     val marketDataList: MutableLiveData<List<MarketData>?> = MutableLiveData(null)
     val kLineModelList = marketDataList.map {

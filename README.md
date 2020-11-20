@@ -5,7 +5,7 @@ A kline UI widget for android. Support analysis indicators and style changes, as
 ## Usage
 Put a widget in the XML layout, set some attributes
 ```xml
-<com.crypto.exchange.klinechart.KLineChartView
+<com.crypto.klinechart.KLineChartView
     android:id="@+id/kline"
     android:layout_width="match_parent"
     android:layout_height="350dp"
@@ -17,27 +17,41 @@ Add data and set some attributes in the code.
 
 #### Kotlin
 ```kotlin
-k_line_chart.candle.candleStyle = Candle.CandleStyle.SOLID
-k_line_chart.addData(dataList)
+kline.candle.candleStyle = Candle.CandleStyle.SOLID
+kline.addData(dataList)
 ```
 #### Java
 ```java
-k_line_chart.getCandle().setCandleStyle(Candle.CandleStyle.SOLID)
-k_line_chart.addData(dataList)
+kline.getCandle().setCandleStyle(Candle.CandleStyle.SOLID)
+kline.addData(dataList)
 ```
 
 ## Download
+### Github Package
++ demogithub.properties is demo of github.properties
+``` gradle.kts
+val githubProperties = Properties()
+githubProperties.load(FileInputStream(rootProject.file("github.properties")))
+
+maven {
+    name = "GitHubPackages"
+    url = uri("https://maven.pkg.github.com/monacohq/KLineChartAndroid")
+    credentials {
+        username = githubProperties["gpr.usr"] as String
+        password = githubProperties["gpr.key"] as String
+    }
+}
+```
 ### gradle
 ```groovy
-implementation 'com.crypto:KLineChartAndroid:1.0.0'
+implementation 'monacohq:klinechart:1.0.2'
 ```
 ### maven
 ```xml
 <dependency>
-  <groupId>com.crypto</groupId>
-  <artifactId>KLineChartAndroid</artifactId>
-  <version>1.0.0</version>
-  <type>pom</type>
+  <groupId>monacohq</groupId>
+  <artifactId>klinechart</artifactId>
+  <version>1.0.2</version>
 </dependency>
 ```
 ## Indicator

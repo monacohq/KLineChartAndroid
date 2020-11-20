@@ -1,9 +1,9 @@
 package com.crypto.klinechart.app
 
 import androidx.annotation.Nullable
-import java.math.BigDecimal
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
+import java.math.BigDecimal
 
 class BigDecimalAdapter {
 

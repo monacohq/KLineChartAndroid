@@ -1,7 +1,7 @@
 package com.crypto.klinechart.app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.crypto.klinechart.model.KLineModel

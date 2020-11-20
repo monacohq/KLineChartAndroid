@@ -32,4 +32,3 @@ data class MarketData(
     @Json(name = "i")
     val instrumentName: String? = null
 )
-
