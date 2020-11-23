@@ -21,8 +21,9 @@ internal class CandleChart(
     private val xAxis: XAxis,
     private val yAxis: YAxis,
     private val dataProvider: DataProvider,
-    private val viewPortHandler: ViewPortHandler
-) : IndicatorChart(indicator, xAxis, yAxis, dataProvider, viewPortHandler) {
+    private val viewPortHandler: ViewPortHandler,
+    private val isMainChart: Boolean = true
+) : IndicatorChart(indicator, xAxis, yAxis, dataProvider, viewPortHandler, isMainChart) {
 
     /**
      * HighLowPriceMark

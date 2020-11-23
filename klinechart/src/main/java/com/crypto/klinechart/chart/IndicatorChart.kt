@@ -19,7 +19,8 @@ internal open class IndicatorChart(
     private val xAxis: XAxis,
     private val yAxis: YAxis,
     private val dataProvider: DataProvider,
-    private val viewPortHandler: ViewPortHandler
+    private val viewPortHandler: ViewPortHandler,
+    private val isMainChart: Boolean = false
 ) : Chart() {
 
     /**
@@ -28,7 +29,8 @@ internal open class IndicatorChart(
     val yAxisChart = YAxisChart(
         yAxis,
         dataProvider,
-        viewPortHandler
+        viewPortHandler,
+        isMainChart
     )
 
     /**

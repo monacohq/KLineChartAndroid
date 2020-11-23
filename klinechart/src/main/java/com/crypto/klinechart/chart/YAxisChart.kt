@@ -19,7 +19,8 @@ import kotlin.math.min
 internal class YAxisChart(
     private val axis: YAxis,
     private val dataProvider: DataProvider,
-    private val viewPortHandler: ViewPortHandler
+    private val viewPortHandler: ViewPortHandler,
+    private val isMainChart: Boolean
 ) : AxisChart() {
 
     /**
@@ -71,11 +72,12 @@ internal class YAxisChart(
     }
 
     /**
+     * only main chart will draw y-axis labels
      * draw y-axis labels
      * @param canvas Canvas
      */
     override fun drawAxisLabels(canvas: Canvas, indicatorType: String) {
-        if (!this.axis.displayTickText) {
+        if (!this.axis.displayTickText || !isMainChart) {
             return
         }
 
