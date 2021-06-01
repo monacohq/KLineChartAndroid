@@ -74,6 +74,13 @@ internal class DataProvider(private val viewPortHandler: ViewPortHandler) {
         if (pos > -1) {
             if (pos >= this.dataList.size) {
                 this.dataList.add(kLineModel)
+
+                // hotfix after added new data the window move to wrong position
+                // if is showing the previous last candle data when added new data, move to the last candle to hotfix wrong position
+                if (isShowingLastDataAfterAddNewData()){
+                    moveToLast()
+                }
+
             } else {
                 this.dataList[pos] = kLineModel
             }
@@ -249,6 +256,8 @@ internal class DataProvider(private val viewPortHandler: ViewPortHandler) {
     }
 
     fun isShowingLastData(): Boolean = dataList.size <= visibleDataMinPos + visibleDataCount
+
+    fun isShowingLastDataAfterAddNewData(): Boolean = dataList.size <= visibleDataMinPos + visibleDataCount + 1
 
     fun getChartDataSpace(): Float = dataSpace
 }
