@@ -77,10 +77,9 @@ internal class DataProvider(private val viewPortHandler: ViewPortHandler) {
 
                 // hotfix after added new data the window move to wrong position
                 // if is showing the previous last candle data when added new data, move to the last candle to hotfix wrong position
-                if (isShowingLastDataAfterAddNewData()){
+                if (isShowingLastDataAfterAddNewData()) {
                     moveToLast()
                 }
-
             } else {
                 this.dataList[pos] = kLineModel
             }

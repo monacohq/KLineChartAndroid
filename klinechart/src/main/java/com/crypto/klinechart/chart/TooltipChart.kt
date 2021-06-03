@@ -89,7 +89,9 @@ internal class TooltipChart(
 
     override fun draw(canvas: Canvas) {
         if (this.dataProvider.currentTipDataPos < this.dataProvider.dataList.size) {
-            val kLineModel = this.dataProvider.dataList[this.dataProvider.currentTipDataPos]
+            val kLineModel: KLineModel = this.dataProvider.dataList[this.dataProvider.currentTipDataPos]
+            val previousDataIndex = this.dataProvider.currentTipDataPos - 1
+            val previouskLineModel: KLineModel? = if (previousDataIndex > 0) this.dataProvider.dataList[previousDataIndex] else null
             val displayCross = this.dataProvider.crossPoint.y >= 0
 
             if (this.tooltip.indicatorDisplayRule == Tooltip.IndicatorDisplayRule.ALWAYS ||
@@ -136,7 +138,7 @@ internal class TooltipChart(
 
                 drawCrossHorizontalLine(canvas)
                 drawCrossVerticalLine(canvas, kLineModel)
-                drawGeneralDataTooltip(canvas, kLineModel)
+                drawGeneralDataTooltip(canvas, kLineModel, previouskLineModel)
             }
         }
     }
@@ -379,7 +381,7 @@ internal class TooltipChart(
      * @param canvas Canvas
      * @param kLineModel KLineModel
      */
-    private fun drawGeneralDataTooltip(canvas: Canvas, kLineModel: KLineModel) {
+    private fun drawGeneralDataTooltip(canvas: Canvas, kLineModel: KLineModel, previouskLineModel: KLineModel?) {
         val drawGeneralDataListener = this.tooltip.drawGeneralDataListener
         if (drawGeneralDataListener != null) {
             drawGeneralDataListener.draw(
@@ -398,15 +400,16 @@ internal class TooltipChart(
                 labels = generalDataFormatter.generatedLabels()
                 values = generalDataFormatter.generatedValues(kLineModel)
             } else {
-                val change = kLineModel.closePrice - kLineModel.openPrice
-                val changePercent = if (kLineModel.openPrice == 0.0) "--" else "${(change / kLineModel.openPrice * 100).formatDecimal(decimal = 2)}%"
+                val changeValue: Double? = if (previouskLineModel?.closePrice != null) kLineModel.closePrice - previouskLineModel.closePrice else null
+                val changeStr = changeValue?.formatDecimal(tooltip.priceDecimalPlace) ?: "N/A"
+                val changePercent = if (changeValue != null && previouskLineModel?.closePrice != null) "${(changeValue / previouskLineModel.closePrice * 100).formatDecimal(decimal = 2)}%" else "N/A"
                 values = mutableListOf(
                     kLineModel.timestamp.formatDate(),
                     kLineModel.openPrice.formatDecimal(tooltip.priceDecimalPlace),
                     kLineModel.closePrice.formatDecimal(tooltip.priceDecimalPlace),
                     kLineModel.highPrice.formatDecimal(tooltip.priceDecimalPlace),
                     kLineModel.lowPrice.formatDecimal(tooltip.priceDecimalPlace),
-                    change.formatDecimal(tooltip.priceDecimalPlace),
+                    changeStr,
                     changePercent,
                     kLineModel.volume.formatDecimal(tooltip.volumeDecimalPlace, mode = RoundingMode.DOWN)
                 )

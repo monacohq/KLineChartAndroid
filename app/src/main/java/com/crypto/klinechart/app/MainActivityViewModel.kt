@@ -106,6 +106,4 @@ class MainActivityViewModel(val activity: MainActivity) : ViewModel() {
             }   
         """
     }
-
-
 }
